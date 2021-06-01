@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotação do dolar hoje</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --verde-escuro: #4F8D56;
+            --verde-logo: #2EAC6D;
+            --verde-claro: #81BE95;
+            --verde-branco: #E2F3D2;
+            --bege-esverdiado: #D3E8B5;
+        }
+        body{
+            background-color: var(--bege-esverdiado);
+        }
+        header{
+            background-color: var(--verde-escuro);
+            color: white;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            height: 40px;
+            margin-bottom: 2.8rem;
+            padding: 2.0rem 0;
+        }
+        .headerTxt{
+            margin-left: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        section.titlesLogo{
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+        }
+        h1{
+            font-size: 2.5rem;
+            margin-bottom: .8rem;
+        }
+        h3{
+            margin-bottom: 4rem;
+        }
+        section.cards{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            margin: 0 auto;
+            width: 400px;
+            padding: .8rem 0;
+        }
+        h6{
+            font-size: 1.1rem;
+            text-align: center;
+            padding: .2rem 0;
+        }
+        div.preço{
+            background-color: var(--verde-branco);
+            padding: 1rem 2.3rem;
+            border-radius: .3rem;
+            font-size: 1.2rem;
+        }
+        div.preço:hover{
+            background: #c4d3b7;
+        }
+        footer{
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 0;
+            height: 50px;
+            bottom: 0;
+            width: 100vw;
+            background-color: var(--verde-escuro);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="headerTxt">Dolar Hoje</div>
+    </header>
+    <main>
+        <section class="titlesLogo">
+            <h1>Acompanhe a cotação do dolar</h1>
+            <h3>Atualizações em tempo real</h3>
+        </section>
+
+        <section class="cards">
+            <div class="container">
+                <h6>Real</h6>
+                <div class="preço real">
+                    R$1,00
+                </div>
+            </div>
+            <div class="container">
+                <h6>Dolar</h6>
+                <div class="preço dolar">
+                    R$5,20
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        2021 - @Luisgustavom1
+    </footer>
+</body>
+</html>

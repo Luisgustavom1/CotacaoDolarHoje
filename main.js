@@ -1,13 +1,13 @@
 const dolar = document.querySelector('.dolar')
 
 function dollarVariation(price){
-    let minimum = 0
-    if(price.USDBRL.high > minimum){
-        const divDolar = document.querySelector(".preço.dolar")
+    let minimum = price.USDBRL.high
+    const divDolar = document.querySelector(".preço.dolar")
+    if(Number(price.USDBRL.high) > minimum){
         minimum = price.USDBRL.high
         divDolar.classList.toggle('up')
     } else {
-        divDolar.classList.delete('up')
+        divDolar.classList.remove('up')
         divDolar.classList.toggle('down')
     }
 }
@@ -27,6 +27,7 @@ fetch(`https://economia.awesomeapi.com.br/json/last/USD-BRL`, options)
 .then(response => {
     response.json()
     .then(data => {
+        console.log(data)
         dolar.innerHTML = `U$D${dolarFormation(data)}`  
     })
 })
